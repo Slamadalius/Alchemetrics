@@ -1,0 +1,26 @@
+.primary-nav {
+	padding-top: 5rem;
+	padding-right: 5rem;
+
+	& li {
+	list-style: none;
+	display: inline-block;
+
+		// animation-name: wordSlide1;
+	 //    animation-duration: 2s;
+	 //    animation-delay: 1s;
+	 //    animation-iteration-count: infinite;
+	}
+
+	& a {
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		padding-right: 2rem;
+		font-size: 1.8rem;
+	}
+
+	&--pull-right {
+		float: right;
+	}
+}

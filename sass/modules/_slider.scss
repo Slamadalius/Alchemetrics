@@ -1,0 +1,116 @@
+// #slider{
+//   width:100%;
+//   height:500px;
+//   position:relative;
+//   overflow:hidden;
+// }
+// @keyframes load{
+//   from{left:-100%;}
+//   to{left:0;}
+// }
+// .slides{
+//   width:400%;
+//   height:100%;
+//   position:relative;
+//   -webkit-animation:slide 30s infinite;
+//   -moz-animation:slide 30s infinite;
+//   animation:slide 30s infinite;
+// }
+// .slider{
+//   width:25%;
+//   height:100%;
+//   float:left;
+//   position:relative;
+//   z-index:1;
+//   overflow:hidden;
+// }
+
+// .images {
+//   float: right;
+//   margin-top: 10rem;
+//   margin-right: 10rem;
+
+//   & img {
+//     width: 45rem;
+//     height: 35rem;
+//   }
+// }
+
+
+// /* Legend */
+// .legend{
+//   border:500px solid transparent;
+//   border-bottom:0;
+//   position:absolute;
+//   bottom:0;
+// }
+
+// /* Contents */
+// .content{
+//   width:100%;
+//   height:100%;
+//   position:absolute;
+//   overflow:hidden;
+// }
+// .content-txt{
+//   width:500px;
+//   height:150px;
+//   float:left;
+//   position:relative;
+//   top:20rem;
+//   margin-left: 20rem;
+//   -webkit-animation:content-s 7.5s infinite;
+//   -moz-animation:content-s 7.5s infinite;
+//   animation:content-s 7.5s infinite;
+// }
+// .content-txt h1{
+//   font-size:24px;
+//   color:#000;
+//   text-align:left;
+//   margin-left:30px;
+//   padding-bottom:10px;
+// }
+// .content-txt h2{
+//   font-weight:normal;
+//   font-size:14px;
+//   font-style:italic;
+//   color:#000;
+//   text-align:left;
+//   margin-left:30px;
+// }
+
+// /* Switch */
+// .switch{
+//   width:120px;
+//   height:10px;
+//   position:absolute;
+//   bottom:50px;
+//   z-index:99;
+//   left:30px;
+// }
+// .switch > ul{
+//   list-style:none;
+// }
+// .switch > ul > li{
+//   width:10px;
+//   height:10px;
+//   border-radius:50%;
+//   background:#333;
+//   float:left;
+//   margin-right:5px;
+//   cursor:pointer;
+// }
+// .switch ul{
+//   overflow:hidden;
+// }
+// .on{
+//   width:100%;
+//   height:100%;
+//   border-radius:50%;
+//   background:#f39c12;
+//   position:relative;
+//   -webkit-animation:on 30s infinite;
+//   -moz-animation:on 30s infinite;
+//   animation:on 30s infinite;
+// }
+

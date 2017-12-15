@@ -1,0 +1,103 @@
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+
+	backface-visibility: hidden;
+	margin-bottom: 6rem;
+
+	&--main {
+		display: block;
+		padding-left: 1.9rem;
+		font-size: 5rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+	}
+
+	&--sub {
+		display: block;
+		font-size: $default-font-size;
+		font-weight: 700;
+		letter-spacing: 1.5rem;
+
+		animation-name: moveInRight;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+	}
+
+	&--sub2 {
+		position: relative;
+		padding-left: 20rem;
+		display: block;
+		font-size: $default-font-size;
+		font-weight: 700;
+		letter-spacing: 1.5rem;
+
+		animation-name: moveInRight;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+
+
+
+
+	}
+
+	&--content {
+		color: #4A96AD;
+		font-weight: 900;
+		position: absolute;
+		right: 19rem;
+		bottom: .02rem;
+	    width: 70%;
+	    margin: 10px auto 0;
+	    text-align: center;
+	    transition: all 0.3s;
+	    overflow: hidden !important;
+
+	    
+	}
+
+}
+
+	.sub-item1 {
+		opacity: 0;
+
+		animation-name: wordSlide1;
+	    animation-duration: 2s;
+	    animation-delay: 1s;
+
+	    
+	}
+
+	.sub-item2 {
+		opacity: 0;
+
+
+		animation-name: wordSlide2;
+	    animation-duration: 2s;
+	    animation-delay: 3s;
+	    
+	  }
+
+	.sub-item3 {
+		opacity: 0;
+
+		animation-name: wordSlide3;
+	    animation-duration: 2s;
+	    animation-delay: 5s;
+	    
+	}
+
+	.sub-item4 {
+		opacity: 0;
+
+
+		animation-name: wordSlide4;
+	    animation-duration: 2s;
+	    animation-delay: 7s;
+	    animation-fill-mode: forwards;
+	    
+	}

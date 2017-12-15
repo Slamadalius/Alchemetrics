@@ -1,0 +1,27 @@
+{
+  "name": "alchemetrics",
+  "version": "1.0.0",
+  "description": "Landing page",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass ./sass/main.scss ./app/assets/styles/styles.css -w",
+    "browsersync": "browser-sync start --server --files './**/*'",
+    "build": "npm run compile:sass && npm browsersync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slamadalius/Alchemetrics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slamadalius/Alchemetrics/issues"
+  },
+  "homepage": "https://github.com/Slamadalius/Alchemetrics#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
