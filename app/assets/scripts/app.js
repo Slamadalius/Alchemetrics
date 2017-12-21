@@ -1,3 +1,41 @@
+// Sticky Header
+$(window).scroll(function() {
+
+    if ($(window).scrollTop() > 100) {
+        $('.main_h').addClass('sticky');
+    } else {
+        $('.main_h').removeClass('sticky');
+    }
+});
+
+// Mobile Navigation
+$('.mobile-toggle').click(function() {
+    if ($('.main_h').hasClass('open-nav')) {
+        $('.main_h').removeClass('open-nav');
+    } else {
+        $('.main_h').addClass('open-nav');
+    }
+});
+
+$('.main_h li a').click(function() {
+    if ($('.main_h').hasClass('open-nav')) {
+        $('.navigation').removeClass('open-nav');
+        $('.main_h').removeClass('open-nav');
+    }
+});
+
+// navigation scroll lijepo radi materem
+$('nav a').click(function(event) {
+    var id = $(this).attr("href");
+    var offset = 70;
+    var target = $(id).offset().top - offset;
+    $('html, body').animate({
+        scrollTop: target
+    }, 500);
+    event.preventDefault();
+});
+
+
 function isElementInView(el) {
 	if (typeof jQuery === "function" && el instanceof jQuery) {
 		el = el[0];
@@ -24,5 +62,55 @@ function callBackFun() {
 
 window.addEventListener("load", callBackFun);
 window.addEventListener("scroll", callBackFun);
+
+
+var map;
+function initMap() {
+	var lat = {lat: 51.466, lng: -0.98798};
+	var marker = {lat: 51.465, lng: -0.96497};
+
+	map = new google.maps.Map(document.getElementById('map'), {
+	  center: lat,
+	  zoom: 15
+	});
+
+	var marker = new google.maps.Marker({
+	    position: marker,
+	    map: map,
+	    title: 'Our office'
+ 	});
+}
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function currentSlide(n) {
+
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dots__d");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}	
+
+
+
+
+
+
 
 

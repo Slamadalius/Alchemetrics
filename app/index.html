@@ -5,232 +5,377 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> <!-- link to google fonts Lato -->
+
+  <link rel="stylesheet" type="text/css" href="./assets/styles/icon-fonts.css"> <!-- link to icon fonts -->
+	<link rel="stylesheet" type="text/css" href="./assets/styles/styles.css"> <!-- link to custom styles -->
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
 	<title>Alchemetrics | Integrated Multi-channel Marketing Services</title>
 </head>
 <body>
-	<header class="header">
-		<div class="header__logo-box">
-			<img src="" alt="Logo" class="header__logo">
-		</div>
-		
-		<nav class="primary-nav primary-nav--pull-right">
-            <ul>
-                <li><a href="#" >Products</a></li>
-                <li><a href="#" >Services</a></li>
-                <li><a href="#" >Blog</a></li>
-                <li><a href="#" >Contact Us</a></li>
-            </ul>
-        </nav>
+    
+    <div class="main_h">  
+        <div class="row">
+              <a class="logo" href="#">Al/Metric</a>
 
-		<div class="header__text-box">
-			<h1 class="heading-primary">
-				<span class="heading-primary--main">Alchemetrics</span>
-				<span class="heading-primary--sub">we can help your marketing with</span>
-				<span class="heading-primary--sub2">
-					<span class="sub-item1 heading-primary--content">Gathering</span> 
-					<span class="sub-item2 heading-primary--content">Storing</span> 
-					<span class="sub-item3 heading-primary--content">Analyzing</span> 
-					<span class="sub-item4 heading-primary--content">Targeting</span> 
+              <div class="mobile-toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
 
-					<!-- <span class="heading-primary--sub-item1 heading-primary--content">
-						Storing <br>
-						Gathering <br>
-						Targeting <br>
-						Analyzing
-					</span> -->
-				data</span> 
-			</h1>
+              <nav class="nav">
+                  <ul class="nav__list">
+                      <li class="nav__list--item"><a href="#sec2">Products</a></li>
+                      <li class="nav__list--item"><a href="#sec3">How It Works</a></li>
+                      <li class="nav__list--item"><a href=".timeline">Our Story</a></li>
+                      <li class="nav__list--item"><a href=".section-book">Contact Us</a></li>
+                  </ul>
+              </nav>
 
-			<a href="#" class="btn btn--white btn--animated">Contact Us</a>
-		</div>
-	</header>
+        </div> <!-- / row -->
+    </div>
+    
+
+  	<header class="header"> <!-- start of the header -->
+    		<div class="header__logo-box">
+    			<img src="" alt="Logo" class="header__logo"> <!-- header Logo -->
+    		</div>
+
+    		<div class="header__text-box"> <!-- Main header text and button -->
+    			<h1 class="heading-primary">
+    				<span class="heading-primary--main">Alchemetrics</span>
+    				<span class="heading-primary--sub">we can help your marketing with</span>
+    				<span class="heading-primary--sub2">
+    					<span class="sub-item1 heading-primary--content">Gathering</span> 
+    					<span class="sub-item2 heading-primary--content">Storing</span> 
+    					<span class="sub-item3 heading-primary--content">Analyzing</span>
+    					<span class="sub-item4 heading-primary--content">Targeting</span> 
+
+    				data</span> 
+    			</h1>
+
+    			<!-- <a href="#" class="btn btn--white btn--animated">Contact Us</a> -->
+    		</div>
+        <div class="mouse">
+           <span></span>
+        </div>
+    	</header> <!-- header end -->
+
 	<main>
-		<section class="section-about">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        Our Products And Services
-                    </h2>
-                </div>
+		<section class="section-about"> <!-- section about start -->
+        <div class="u-center-text u-margin-bottom-big"> <!-- title of the sections -->
+            <h2 class="heading-secondary" id="sec2">
+                Our Products And Services
+            </h2>
+        </div>
 
-                <div class="single-item">
-                  <div class="row">
-                      <div class="col-1-of-2">
-                          <h3 class="heading-tertiary u-margin-bottom-small">Crm Experts</h3>
-                          <p class="paragraph">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                              ducimus quam nisi exercitationem omnis earum qui.
-                          </p>
+        <div class="slideshow-container">
+          <div class="mySlides"> <!-- my slides start -->
+            <div class="single-item"> <!-- text of the section -->
+              <div class="row">
+                  <div class="col-1-of-2">
+                      <h3 class="heading-tertiary u-margin-bottom-small">Crm Experts</h3>
+                      <p class="paragraph">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                          ducimus quam nisi exercitationem omnis earum qui.
+                      </p>
 
-                          <h3 class="heading-tertiary u-margin-bottom-small">Single Costumer View</h3>
-                          <p class="paragraph">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
-                          </p>
+                      <h3 class="heading-tertiary u-margin-bottom-small">Single Costumer View</h3>
+                      <p class="paragraph">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                      </p>
 
-                          <a href="#" class="btn-text">Learn more &rarr;</a>
-                      </div>
-                      
-                  </div>
-                </div>
-            </section>
+                      <a href="#" class="btn-text">Learn more &rarr;</a>
+                  </div>              
+              </div>
+            </div> <!-- single item end -->
+          </div> <!-- mySlides end -->
+          <div class="mySlides"> <!-- my slides start -->
+            <div class="single-item"> <!-- text of the section -->
+              <div class="row">
+                  <div class="col-1-of-2">
+                      <h3 class="heading-tertiary u-margin-bottom-small">Crm Experts</h3>
+                      <p class="paragraph">
+                          Labas kaip sekasi.
+                      </p>
 
-            <section class="section-features">
-                
-                <div class="row">
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-world"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Lore Ipsum</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
+                      <h3 class="heading-tertiary u-margin-bottom-small">Single Costumer View</h3>
+                      <p class="paragraph">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                      </p>
 
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-compass"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Lore Ipsum</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-map"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Lore Ipsum</h3>
-                             <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-heart"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Lore Ipsum</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="timeline">
-            	<ul>
-                  <li class="timeline__list">
-                      <div class="timeline__content">
-                          <time class="timeline__time">MARCH 21 ,1999</time>
+                      <a href="#" class="btn-text">Learn more &rarr;</a>
+                  </div>              
+              </div>
+            </div> <!-- single item end -->
+          </div> <!-- mySlides end -->
+          <div class="mySlides"> <!-- my slides start -->
+            <div class="single-item"> <!-- text of the section -->
+              <div class="row">
+                  <div class="col-1-of-2">
+                      <h3 class="heading-tertiary u-margin-bottom-small">Crm Experts</h3>
+                      <p class="paragraph">
                           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </div>
-                  </li>
-                   <li class="timeline__list">
-                      <div class="timeline__content">
-                          <time class="timeline__time">MARCH 21 ,1999</time>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </div>
-                  </li> 
-                   <li class="timeline__list">
-                      <div class="timeline__content">
-                          <time class="timeline__time">MARCH 21 ,1999</time>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </div>
-                  </li> 
-                   <li class="timeline__list">
-                      <div class="timeline__content">
-                          <time class="timeline__time">MARCH 21 ,1999</time>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </div>
-                  </li> 
-                   <li class="timeline__list">
-                      
-                  </li>    
-                </ul>
-            </section>
+                      </p>
 
-            <section class="section-stories">
-                <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="#" type="video/mp4">
-                        <source src="#" type="video/webm">
-                        Your browser is not supported!
-                    </video>
+                      <a href="#" class="btn-text">Learn more &rarr;</a>
+                  </div>              
+              </div>
+            </div> <!-- single item end -->
+          </div> <!-- mySlides end -->
+        </div>
+        <div class="dots u-margin-top-small">
+            <span class="dots__d" onclick="currentSlide(1)"></span> 
+            <span class="dots__d" onclick="currentSlide(2)"></span> 
+            <span class="dots__d" onclick="currentSlide(3)"></span> 
+        </div>
+        
+    </section> <!-- section about end -->
+
+    <section class="section-features" id="sec3"> <!-- section fetures start -->  
+        <div class="row">
+            <div class="col-1-of-4"> <!-- reusable feture box -->
+                <div class="feature-box">
+                    <i class="feature-box__icon icon-basic-world"></i>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Data Collection</h3>
+                    <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet consectetur adipisiciasng elit. Apasderiam, ipsum saadspiente aspernatur. Asdasd asad ads.
+                    </p>
                 </div>
+            </div> <!-- feature box end -->
 
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        We make people genuinely happy
-                    </h2>
+            <div class="col-1-of-4"> <!-- reusable feture box -->
+                <div class="feature-box">
+                    <i class="feature-box__icon icon-basic-server-upload"></i>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Storing In Our Database</h3>
+                    <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                    </p>
                 </div>
+            </div> <!-- feature box end -->
 
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Mary Smith</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                            </p>
-                        </div>
+            <div class="col-1-of-4"> <!-- reusable feture box -->
+                <div class="feature-box">
+                    <i class="feature-box__icon icon-basic-map"></i>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Analyzing Data with ease</h3>
+                     <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                    </p>
+                </div>
+            </div> <!-- feature box end -->
+
+            <div class="col-1-of-4"> <!-- reusable feture box -->
+                <div class="feature-box">
+                    <i class="feature-box__icon icon-basic-mail-open-text"></i>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Managing you eMails</h3>
+                    <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur. Lasda asdasdaa sadsasd.
+                    </p>
+                </div>
+            </div> <!-- feature box end -->
+        </div>
+    </section>
+
+    <section class="timeline"> <!-- section timeline start -->
+    	<ul>
+          <li class="timeline__list"> <!-- timeline list item -->
+              <div class="timeline__content">
+                  <time class="timeline__time">MARCH 21 ,1999</time>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+          </li>
+           <li class="timeline__list"><!-- timeline list item -->
+              <div class="timeline__content">
+                  <time class="timeline__time">MARCH 21 ,1999</time>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+          </li> 
+           <li class="timeline__list"><!-- timeline list item -->
+              <div class="timeline__content">
+                  <time class="timeline__time">MARCH 21 ,1999</time>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+          </li> 
+           <li class="timeline__list"><!-- timeline list item -->
+              <div class="timeline__content">
+                  <time class="timeline__time">MARCH 21 ,1999</time>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+          </li> 
+          <li class="timeline__list"><!-- timeline list item --> 
+          </li>   
+        </ul>
+    </section>
+
+    <section class="section-stories"> <!-- section stories start -->
+        <div class="bg-video"> <!-- background video -->
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="./assets/img/Oculus.mp4" type="video/mp4"> <!-- importing 2 types of video -->
+                <source src="./assets/img/Oculus.webm" type="video/webm">
+                Your browser is not supported! <!-- if your browser doesn't support video -->
+            </video>
+        </div>
+
+        <div class="u-center-text u-margin-bottom-big"> <!-- title of the section -->
+            <h2 class="heading-secondary">
+                We make people genuinely happy
+            </h2>
+        </div>
+
+        <div class="row"> <!-- reusable story box -->
+            <div class="story">
+                <figure class="story__shape">
+                    <img src="./assets/img/james.jpg" alt="Armadillo" class="story__img">
+                    <figcaption class="story__caption">James Ray</figcaption>
+                </figure>
+                <div class="story__text">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Armadillo</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                        ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                        repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                    </p>
+                </div>
+            </div>
+        </div> <!-- story box end -->
+
+        <div class="row"> <!-- reusable story box -->
+            <div class="story">
+                <figure class="story__shape">
+                    <img src="./assets/img/james.jpg" alt="OgilvyOne" class="story__img">
+                    <figcaption class="story__caption">Paul King</figcaption>
+                </figure>
+                <div class="story__text">
+                    <h3 class="heading-tertiary u-margin-bottom-small">OgilvyOne</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                        ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                        repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="u-center-text u-margin-top-huge">
+            <a href="#" class="btn-text">Read all stories &rarr;</a>
+        </div>
+    </section>
+
+     <section class="section-book"> <!-- section contact us start -->
+      <iframe
+        class="map"  
+        frameborder="0" 
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCxxCjgA5I-liG8nRmhF3CsVHM6vr1yG7A
+        &q=33+King's+Rd,+Reading+RG4+8DS,+UK
+        &center=51.46544,-0.97527
+        &zoom=15" allowfullscreen>
+        
+      </iframe> <!-- iframe for google maps -->
+        <div class="row">
+          <div class="book">
+              <div class="book__form">
+                <form action="#" class="form">
+                    <div class="u-margin-bottom-medium">
+                        <h2 class="heading-secondary">
+                            Contact Us Now
+                        </h2>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Jack Wilson</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My life is completely different now</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                            </p>
-                        </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                        <label for="name" class="form__label">Full name</label>
                     </div>
-                </div>
 
-                <div class="u-center-text u-margin-top-huge">
-                    <a href="#" class="btn-text">Read all stories &rarr;</a>
-                </div>
-            </section>
+                    <div class="form__group">
+                        <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                        <label for="email" class="form__label">Email address</label>
+                    </div>
+
+                    <div class="form__group">
+                        <textarea rows="9" cols="50" class="form__input" placeholder="Your message" id="email" required></textarea>
+                        <label for="email" class="form__label">Your Message</label>
+                    </div>
+
+                    <div class="form__group">
+                        <button class="btn btn--green">Next step &rarr;</button>
+                    </div>
+                </form>
+              </div>
+          </div>
+        </div>
+    </section>
 	</main>
+
+  <footer class="footer">
+    <div class="footer--fixed">
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__logo-box">
+                  <picture class="footer__logo">
+                      <img srcset="#" alt="Full logo" src="#">
+                  </picture>   
+              </div>
+        </div>
+        <div class="col-1-of-2">
+          <div class="footer__logo-box">
+                  <picture class="footer__logo">
+                      <img  style="width: 25rem; height: 10rem;" alt="Full logo" src="./assets/img/the-drum-marketing-award-winners.png">
+                  </picture>   
+              </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Services</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Products</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Copyright &copy;
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 		  
 
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIkSWsVHsnNvqwNc7NEGp631kz0nqPkag&callback=initMap"
+    async defer></script>
 	<script src="./assets/scripts/app.js"></script>
 </body>
 </html>
