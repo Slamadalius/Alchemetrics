@@ -299,9 +299,6 @@ body {
   z-index: -1;
   opacity: .15;
   overflow: hidden; }
-  @media only screen and (max-width: 37.5em) {
-    .bg-video {
-      display: none; } }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -704,18 +701,7 @@ a {
   animation-duration: 1.5s; }
 
 .timeline {
-  margin-top: -20vh;
-  padding-top: 15rem;
   background-color: #f7f7f7; }
-  @media only screen and (max-width: 75em) {
-    .timeline {
-      padding-top: 17rem; } }
-  @media only screen and (max-width: 56.25em) {
-    .timeline {
-      padding-top: 19rem; } }
-  @media only screen and (max-width: 25em) {
-    .timeline {
-      padding-top: 25rem; } }
   .timeline__list {
     list-style: none;
     position: relative;
@@ -830,10 +816,12 @@ a {
     top: 3.3rem; }
   .timeline__list:nth-child(odd) .timeline__time {
     position: relative;
+    padding-right: 1rem;
     top: 0;
     right: 0; }
   .timeline__list:nth-child(even) .timeline__time {
     position: relative;
+    padding-right: 1rem;
     top: 0;
     left: 0; }
   .timeline__list:nth-child(even).in-view .timeline__content {

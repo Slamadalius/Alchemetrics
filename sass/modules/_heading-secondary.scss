@@ -7,4 +7,21 @@
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
+
+    @include respond(tab-port) {
+    	font-size: 3rem;
+    }
+
+    @include respond(phone) {
+    	font-size: 2.5rem;
+    }
+}
+
+.about--img {
+    height: 30rem; 
+    float: right;
+
+    @include respond(tab-port) {
+        display: none;
+    }
 }

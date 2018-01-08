@@ -73,6 +73,22 @@
 	}
 }
 
+@keyframes wordSlide2-phone {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+		right: 5rem;
+	}
+
+	100% {
+		opacity: 0;
+		right: 5rem;
+	}
+}
+
 @keyframes wordSlide3 {
 	0% {
 		
@@ -110,5 +126,17 @@
 		
 		opacity: 1;
 		
+	}
+}
+
+@keyframes moveInLeftSlide {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translate(0);
 	}
 }

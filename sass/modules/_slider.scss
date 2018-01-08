@@ -11,6 +11,18 @@
 	top: 176%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	@include respond(tab-land) {
+		top: 170%;
+	}
+
+	@include respond(tab-port) {
+		top: 155%;
+	}
+
+	@include respond(sm-phone) {
+		top: 148%;
+	}
 	
 	&__d {
 		cursor:pointer;
@@ -28,3 +40,9 @@
   background-color: #717171;
 }
 
+.fade {
+	-webkit-animation-name: moveInLeftSlide;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: moveInLeftSlide;
+	  animation-duration: 1.5s;
+}

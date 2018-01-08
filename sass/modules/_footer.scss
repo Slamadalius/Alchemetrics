@@ -1,28 +1,33 @@
 .footer {
 	background-color: #333;
-	padding: 10rem 0;
+	padding: 5rem 0;
 	font-size: 1.4rem;
 
-	&--fixed {
-		
-	}
 
 	&__logo-box {
 		text-align: center;
-		margin-bottom: 8rem;
 	}
 
 	&__logo {
-		width: 15rem;
+		width: 2rem;
 		height: auto;
+	}
+
+	&__log {
+		height: 8rem;
 	}
 
 	&__list {
 		list-style: none;
+		text-align: center;
+
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
 	}
 
 	&__item {
 		display: inline-block;
+		padding: 2rem 0;
 
 		&:not(:last-child) {
 			margin-right: 1.5rem;
@@ -43,5 +48,46 @@
 			color: $mainBlue;
 			box-shadow: 0 1rem 2rem rgba($color-black, .4);
 		}
+
+		&--soc {
+			&:link,
+			&:visited {
+				color: #f7f7f7;
+				text-decoration: none;
+				display: inline-block;
+			}
+
+			// &::after {
+			// 	content: "";
+			// 	background-color: $mainBlue; 
+			// 	display: inline-block;
+			// 	height: 100%;
+			// 	width: 100%;
+			// 	border-radius: 20px;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// 	z-index: -1;
+			// 	transition: all .4s;
+			// }
+
+			&:hover,
+			&:active {
+				color: $mainBlue;
+				transform: translateY(-3px);
+				//box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+
+				&::after {
+				transform: scaleX(1.4) scaleY(1.6);
+				opacity: 0;
+				}
+			}
+		}
+	}
+
+	&__copyright {
+		text-align: center;
+		padding-top: 4rem;
+		color: #fff;
 	}
 }

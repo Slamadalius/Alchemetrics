@@ -8,11 +8,20 @@
 	padding-left: 9rem;
 	font-size: $default-font-size;
 
+	@include respond(tab-port) {
+		padding: 4rem;
+		padding-left: 5rem;
+		width: 100%;
+	}
+
 	&__shape {
 		position: relative;	
 		width: 15rem;
 		height: 15rem;
 		float: left;
+		overflow: hidden;
+		border-radius: 50%;
+
 		-webkit-shape-outside: circle(50% at 50% 50%);
 		shape-outside: circle(50% at 50% 50%);
 

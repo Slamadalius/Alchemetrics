@@ -1,4 +1,18 @@
 .timeline {
+	margin-top: -20vh;
+	padding-top: 15rem;
+
+	@include respond(tab-land) {
+		padding-top: 17rem;
+	}
+
+	@include respond(tab-port) {
+		padding-top: 19rem;
+	}
+
+	@include respond(sm-phone) {
+		padding-top: 25rem;
+	}
 
 	background-color: $color-grey-light-1;
 
@@ -21,6 +35,10 @@
 
 		&:last-child {
 			padding-top: 20rem;
+
+			@include respond(phone) {
+				top: 0rem;
+			}
 
 			&.in-view::after {
 				width: 0;
@@ -46,7 +64,11 @@
 	&__list:nth-child(odd) &__content {
 		left: 4.5rem;
 
-		transform: translate3d(20rem,0,0);
+		transform: translate3d(10rem,0,0);
+
+		@include respond(tab-land) {
+			transform: none;
+		}
 	}
 
 	&__list:nth-child(odd).in-view &__content {
@@ -65,12 +87,20 @@
 		left: -43.9rem;
 
 		transform: translate3d(-20rem,0,0);
+
+		@include respond(tab-land) {
+			transform: none;
+		}
 	}
 
 	&__list:nth-child(even).in-view &__content {
 		left: -48.9rem;
 
 		transform: none;
+
+		@include respond(tab-port) {
+			left: -33.9rem;
+		}
 	}
 
 	&__list:nth-child(even) &__content::before {
@@ -91,6 +121,18 @@
 		  visibility: hidden;
 		  opacity: 0;
 		  transition: all .5s ease-in-out;
+
+		  @include respond(tab-port) {
+		  	width: 30rem;
+		  }
+
+		  @include respond(phone) {
+		  	width: 45rem;
+		  }
+
+		  @include respond(sm-phone) {
+			font-size: 2rem;
+		  }
 	}
 
 	&__content::before {
@@ -108,6 +150,11 @@
 		top: 21.6rem;
 		right: 51rem;
 		width: 13rem;
+
+		@include respond(tab-port) {
+			top: 35.6rem;
+			right: 37rem;
+		}
 	}
 
 	&__list:nth-child(even) &__time {
@@ -116,10 +163,15 @@
 		top: 21.9rem;
 		left: 52rem;
 		width: 13rem;
+
+		@include respond(tab-port) {
+			top: 35.9rem;
+			left: 38rem;
+		}
 	}
 }
 
-@media screen and (max-width: 600px) {
+@include respond(phone) {
 	
 	.timeline__list {
 		margin:0;
@@ -128,14 +180,12 @@
 
 	.timeline__list:nth-child(odd) .timeline__time {
 		position: relative;
-		padding-right: 1rem;
 		top: 0;
 		right: 0;
 	}
 
 	.timeline__list:nth-child(even) .timeline__time {
 		position: relative;
-		padding-right: 1rem;
 		top: 0;
 		left: 0;
 	}
@@ -147,6 +197,6 @@
 	.timeline__list:nth-child(even).in-view .timeline__content::before {
 		left: -15px;
     	border-width: 8px 16px 8px 0;
-    	border-color: transparent #F45B69 transparent transparent;
+    	border-color: transparent $mainBlue transparent transparent;
 	}
 }

@@ -1,0 +1,128 @@
+
+
+
+
+ <?php 
+                    
+
+                    if($_SERVER["REQUEST_METHOD"]=="POST"){
+                      include_once("process_form.php");
+                      $result = validate($_POST);
+
+                      $_SESSION['token'] = bin2hex(random_bytes(12));
+                    }
+
+                    
+                  ?>
+
+
+ <?php 
+                        if(isset($result)){
+                          echo "<div class='alert " .$result['status']."'>" .$result['message']."</div>";
+                        }
+
+                        $name = isset($_POST['name']) ? $_POST['name']: '';
+                        $email = isset($_POST['email']) ? $_POST['email']: '';
+                        $msg = isset($_POST['msg']) ? $_POST['msg']: '';
+
+                      ?>
+
+
+
+
+
+<?php 
+
+function validate($post)
+{
+
+  if(!isset($_SESSION['token'])){
+    return false;
+  }
+
+  if($_SESSION['token'] != $post['token']){
+    return false;
+  }
+
+  if(!empty($post['familyname'])){
+    return false;
+  }
+
+  $errors = [];
+  $message_output = "";
+
+  $email = htmlspecialchars($post['email'], ENT_QUOTES);
+  $name = htmlspecialchars($post['name'], ENT_QUOTES);
+  $msg = htmlspecialchars($post['msg'], ENT_QUOTES);
+
+  if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) ){
+    $errors[] = 'email';
+  }
+
+  if(empty($name)){
+    $errors[] = 'name';
+  }
+
+  if(empty($msg)){
+    $errors[] = 'message';
+  }
+
+  if(empty($errors)){
+    $message_output = "Thank you! We received your message and will contact you as soon as possible";
+    $status = "alert-success";
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "contacts";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if($conn->connect_error){
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $name = mysqli_real_escape_string($conn, $post['name']);
+    $email = mysqli_real_escape_string($conn, $post['email']);
+    $msg = mysqli_real_escape_string($conn, $post['msg']);
+
+    $select = mysqli_query($conn, "SELECT * FROM contact_form WHERE email='".$email."'");
+      if (!$select){
+            die('Error: ' . mysqli_error($conn));
+        }
+
+      if(mysqli_num_rows($select) > 0){
+
+          $message_output = "Email already exists";
+          $status = "alert-danger";
+
+
+      }else{
+
+          $sql = "insert into contact_form( name, email, msg ) values ('$name', '$email', '$msg')";
+
+          if($conn->query($sql) !== TRUE) {
+          $error[] = "Error inserting into database: ";
+        }
+
+        $message = var_export($_POST, true);
+        mail("guitarguy331@gmail.com","Received form message",$msg);
+
+        $conn->close();
+      }
+
+
+  } else {
+    $message_output .= "Problems with the following fields <br>";
+
+    foreach($errors as $error) {
+      $message_output .= $error. "<br>";
+    }
+
+    $status = "alert-danger";
+  }
+
+  return (array('status'=>$status,'message'=>$message_output));
+}
+
+?>

@@ -64,22 +64,7 @@ window.addEventListener("load", callBackFun);
 window.addEventListener("scroll", callBackFun);
 
 
-var map;
-function initMap() {
-	var lat = {lat: 51.466, lng: -0.98798};
-	var marker = {lat: 51.465, lng: -0.96497};
 
-	map = new google.maps.Map(document.getElementById('map'), {
-	  center: lat,
-	  zoom: 15
-	});
-
-	var marker = new google.maps.Marker({
-	    position: marker,
-	    map: map,
-	    title: 'Our office'
- 	});
-}
 
 
 var slideIndex = 1;
@@ -87,14 +72,13 @@ showSlides(slideIndex);
 
 
 function currentSlide(n) {
-
   showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dots__d");
+  var slides = $(".mySlides");
+  var dots = $(".dots__d");
   if (n > slides.length) {slideIndex = 1} 
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -108,9 +92,46 @@ function showSlides(n) {
 }	
 
 
+$(document).ready(function() {
+      $('form').submit(function (event) {
+        event.preventDefault();
+        var name = $("#mail-name").val(),
+            email = $("#mail-email").val(),
+            message = $("#mail-message").val(),
+            familyname = $("#familyname").val(),
+            token = $("#token").val(),
+            submit = $("#mail-submit").val();
+        $(".form-message").load("process_form.php", {
+          name: name,
+          email: email,
+          message: message,
+          familyname: familyname,
+          token: token,
+          submit: submit
+        });
+      });
+});
 
 
+var $socialLink = $(".footer__link--soc");
 
+$socialLink.each(function(index, element){
+  var icon = $(element).find("i");
+  var time = 0.2;
+  var tl = new TimelineMax({paused:true});
+  tl.to(icon, time, {y:30, ease:Expo.easeIn})
+    .set(icon, {y:-30})
+    .to(icon, time, {y:0, ease:Back.easeOut});
+  element.animation = tl;
+})
 
+  $socialLink.hover(over, out);
 
+  function over(){
+    this.animation.play();
+  }
+
+  function out(){
+    this.animation.reverse();
+  }
 
