@@ -31,7 +31,7 @@ $('nav a').click(function(event) {
     var target = $(id).offset().top - offset;
     $('html, body').animate({
         scrollTop: target
-    }, 500);
+    }, 1000);
     event.preventDefault();
 });
 
@@ -112,26 +112,4 @@ $(document).ready(function() {
       });
 });
 
-
-var $socialLink = $(".footer__link--soc");
-
-$socialLink.each(function(index, element){
-  var icon = $(element).find("i");
-  var time = 0.2;
-  var tl = new TimelineMax({paused:true});
-  tl.to(icon, time, {y:30, ease:Expo.easeIn})
-    .set(icon, {y:-30})
-    .to(icon, time, {y:0, ease:Back.easeOut});
-  element.animation = tl;
-})
-
-  $socialLink.hover(over, out);
-
-  function over(){
-    this.animation.play();
-  }
-
-  function out(){
-    this.animation.reverse();
-  }
 
